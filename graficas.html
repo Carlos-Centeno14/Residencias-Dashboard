@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>DataSys</title>
+        <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
+        <link href="css/styles.css" rel="stylesheet"/>
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    </head>
+    <body class="sb-nav-fixed">
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+            <!-- Navbar Brand-->
+            <a class="navbar-brand ps-3" href="index.html">DataSys</a>
+            <!-- Navbar-->
+            <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+            <!-- Navbar-->
+            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="admcuenta.html">Administra la cuenta</a></li>
+                        <li><hr class="dropdown-divider" /></li>
+                        <li><a class="dropdown-item" href="login.html">Cerrar Sesion</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+                            <div class="sb-sidenav-menu-heading">Home</div>
+                            <a class="nav-link" href="index.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-home-alt"></i></div>
+                                Inicio
+                            </a>
+                            <div class="sb-sidenav-menu-heading">Registros</div>
+                            <a class="nav-link collapsed" href="" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                                Produccion
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="registros.html">Ver Registros</a>
+                                    <a class="nav-link" href="addregistros.html">Agregar Registro</a>
+                                </nav>
+                            </div>
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePagess" aria-expanded="false" aria-controls="collapsePages">
+                                <div class="sb-nav-link-icon"><i class="fas fa-bars"></i></div>
+                                Ventas
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapsePagess" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="registrosv.html">Ver Registros</a>
+                                    <a class="nav-link" href="addregistrosv.html">Agregar Registro</a>
+                                </nav>
+                            </div>
+
+
+                            <div class="sb-sidenav-menu-heading">Informe</div>
+                            <a class="nav-link" href="graficas.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                                Produccion
+                            </a>
+                            <a class="nav-link" href="graficasv.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-chart-bar"></i></div>
+                                Ventas
+                            </a>
+                            <a class="nav-link" href="graficasr.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-bars"></i></div>
+                                Generar Reporte
+                            </a>
+
+                            <div class="sb-sidenav-menu-heading">Administracion</div>
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tools"></i></div>
+                                Herramientas
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+                                    <a class="nav-link collapsed" href="areasadm.html" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
+                                        Areas
+                                    </a>
+                                    <a class="nav-link collapsed" href="usersadm.html" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
+                                        Usuarios
+                                    </a>
+                                    <a class="nav-link collapsed" href="faseadm.html" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
+                                        Fases
+                                    </a>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <div id="layoutSidenav_content">
+                <main>
+                    <div class="container-fluid px-4">
+                        <h1 class="mt-4">Informe de Graficas de fases de produccion</h1>
+                        <ol class="breadcrumb mb-4">
+                            <li class="breadcrumb-item active">
+                                En esta ventana se presentarán los graficos de manera detallada los resultados de las areas de producción.</li>
+                        </ol>
+                        
+                        <div class="row">
+                            <div class="input-group mb-3 mt-3">
+                                <label class="input-group-text" for="areas">Area</label>
+                                <select class="form-select" id="areas">
+                                  <option selected>Seleccione el area a revisar...</option>
+                                  <option value="1">Corte</option>
+                                  <option value="2">Habilitado</option>
+                                  <option value="3">Armado</option>
+                                  <option value="4">etc.</option>
+                                </select>
+
+                                <label class="input-group-text" for="areas">Año</label>
+                                <select class="form-select" id="areas">
+                                  <option selected>Seleccione el año a revisar...</option>
+                                  <option value="1">2021</option>
+                                  <option value="2">2022</option>
+                                  <option value="3">2023</option>
+                                  <option value="4">2024</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        
+                        <div class="row mt-3">
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card bg-danger text-white mb-4">
+                                    <div class="card-body">9,998</div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        Producto Total
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card bg-primary text-white mb-4">
+                                    <div class="card-body">255,540</div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        Minutos Trabajados
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card bg-info text-white mb-4">
+                                    <div class="card-body">155,540</div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        Minutos Producidos
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card text-white mb-4 bg-success">
+                                    <div class="card-body">100.00%</div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        Eficiencia Promedio
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+<hr>                        
+<!-- GRAFICAS -->
+<h3 class="mt-2 mb-4">Eficiencia</h3>
+
+                        <div class="row">
+                            <div class="col-xl-6">
+                                <div class="card mb-4">
+                                    <div class="card-header">
+                                        <i class="fas fa-chart-area  me-1"></i>
+                                        Mensual
+                                    </div>
+                                    <div class="chartmes">
+
+                                    </div>
+                                    <div class="card-body"><canvas id="myBarChart" width="100%" height="40"></canvas></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6">
+                            <div class="card mb-4">
+                                <div class="card-header">
+                                    <i class="fas fa-calendar me-1"></i>
+                                    Anual
+                                </div>
+                                <div class="card-body"><canvas id="myAreaChart" width="100%" height="40"></canvas></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-6 col-md-3">
+                                <div class="card mb-4">
+                                    <div class="card-header">
+                                        <i class="fas fa-bars me-1"></i>
+                                        Semanal
+                                    </div>
+                                    <div class="card-body"><canvas id="myBarChart" width="100%" height="40"></canvas></div>
+                                </div>
+                            </div>
+                        </div>
+<hr>
+<h3 class="mt-2 mb-4">Producto</h3>
+
+                        <div class="row">
+                            <div class="col-xl-6">
+                                <div class="card mb-4">
+                                    <div class="card-header">
+                                        <i class="fas fa-chart-area  me-1"></i>
+                                        Anual
+                                    </div>
+                                    <div class="chartmes">
+
+                                    </div>
+                                    <div class="card-body"><canvas id="myBarChart" width="100%" height="40"></canvas></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6">
+                            <div class="card mb-4">
+                                <div class="card-header">
+                                    <i class="fas fa-calendar me-1"></i>
+                                    Mensual
+                                </div>
+                                <div class="card-body"><canvas id="myAreaChart" width="100%" height="40"></canvas></div>
+                            </div>
+                        </div>
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <i class="fas fa-table me-1"></i>
+                                Tabla de producto
+                            </div>
+                            <div class="card-body">
+                                <table id="datatablesSimple">
+                                </table>
+                            </div>
+                        </div>
+
+
+<hr>
+<h3 class="mt-2 mb-4">Minutos</h3>
+
+                        <div class="row">
+                            <div class="col-xl-6">
+                                <div class="card mb-4">
+                                    <div class="card-header">
+                                        <i class="fas fa-tools  me-1"></i>
+                                        Trabajados y Producidos
+                                    </div>
+
+                                    <div class="card-body"><canvas id="chartmes" width="100%" height="40"></canvas></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+<hr>
+<h3 class="mt-2 mb-4">Miscelaneos</h3>
+                        <div class="row">
+                            <div class="col-xl-6 col-md-3">
+                                <div class="card mb-4">
+                                    <div class="card-header">
+                                        <i class="fas fa-user  me-1"></i>
+                                        Promedio de operadores
+                                    </div>
+
+                                    <div class="card-body"><canvas id="chartmes" width="100%" height="40"></canvas></div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-md-3">
+                                <div class="card mb-4">
+                                    <div class="card-header">
+                                        <i class="fas fa-clock  me-1"></i>
+                                        Minutos por piezado
+                                    </div>
+
+                                    <div class="card-body"><canvas id="chartmes" width="100%" height="40"></canvas></div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </main>
+                <footer class="py-4 bg-light mt-auto">
+                    <div class="container-fluid px-4">
+                        <div class="d-flex align-items-center justify-content-between small">
+                            <div class="text-muted"> Fray Alfonso Muebles</div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <script src="main.js"></script>
+        <script src="js/scripts.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.0/echarts.min.js" integrity="sha512-k37wQcV4v2h6jgYf5IUz1MoSKPpDs630XGSmCaCCOXxy2awgAWKHGZWr9nMyGgk3IOxA1NxdkN8r1JHgkUtMoQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
+        <script src="js/datatables-simple-demo.js"></script>
+    </body>
+</html>
