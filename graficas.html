@@ -134,7 +134,6 @@
                             </div>
                         </div>
 
-                        
                         <div class="row mt-3">
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-danger text-white mb-4">
@@ -175,119 +174,182 @@
 <!-- GRAFICAS -->
 <h3 class="mt-2 mb-4">Eficiencia</h3>
 
-                        <div class="row">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xl-6">
+                                    <div class="card mb-4">
+                                        <div class="card-header">
+                                            <i class="fas fa-chart-area  me-1"></i>
+                                            Mensual
+                                        </div>
+                                        <div class="card-body">
+                                            <div id="Area-efi-m" class="chart">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="container">
                             <div class="col-xl-6">
                                 <div class="card mb-4">
                                     <div class="card-header">
-                                        <i class="fas fa-chart-area  me-1"></i>
-                                        Mensual
+                                        <i class="fas fa-calendar me-1"></i>
+                                        Anual
                                     </div>
-                                    <div class="chartmes">
+                                    <div class="card-body">
+                                        <div id="Area-efi-a" class="chart">
 
+                                        </div>
                                     </div>
-                                    <div class="card-body"><canvas id="myBarChart" width="100%" height="40"></canvas></div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-6">
-                            <div class="card mb-4">
-                                <div class="card-header">
-                                    <i class="fas fa-calendar me-1"></i>
-                                    Anual
-                                </div>
-                                <div class="card-body"><canvas id="myAreaChart" width="100%" height="40"></canvas></div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xl-6 col-md-3">
-                                <div class="card mb-4">
-                                    <div class="card-header">
-                                        <i class="fas fa-bars me-1"></i>
-                                        Semanal
+
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xl-6 col-md-3">
+                                    <div class="card mb-4">
+                                        <div class="card-header">
+                                            <i class="fas fa-bars me-1"></i>
+                                            Semanal
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="chart" id="Area-efi-sem">
+
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="card-body"><canvas id="myBarChart" width="100%" height="40"></canvas></div>
                                 </div>
                             </div>
                         </div>
+
+
+
+
 <hr>
 <h3 class="mt-2 mb-4">Producto</h3>
 
-                        <div class="row">
+
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xl-6">
+                                    <div class="card mb-4">
+                                        <div class="card-header">
+                                            <i class="fas fa-chart-area  me-1"></i>
+                                            Anual
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="chart" id="Area-pd-anu">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container">
                             <div class="col-xl-6">
                                 <div class="card mb-4">
                                     <div class="card-header">
-                                        <i class="fas fa-chart-area  me-1"></i>
-                                        Anual
+                                        <i class="fas fa-calendar me-1"></i>
+                                        Mensual
                                     </div>
-                                    <div class="chartmes">
+                                    <div class="card-body">
+                                        <div class="chart" id="Area-pd-men">
 
+                                        </div>
                                     </div>
-                                    <div class="card-body"><canvas id="myBarChart" width="100%" height="40"></canvas></div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-6">
+                        <div class="container">
+                            <div class="col-xl-6">
+                                <div class="card mb-4">
+                                    <div class="card-header">
+                                        <i class="fas fa-chart-bar me-1"></i>
+                                        Semanal
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="chart" id="Area-pd-sem">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container">
                             <div class="card mb-4">
                                 <div class="card-header">
-                                    <i class="fas fa-calendar me-1"></i>
-                                    Mensual
+                                    <i class="fas fa-table me-1"></i>
+                                    Tabla de producto
                                 </div>
-                                <div class="card-body"><canvas id="myAreaChart" width="100%" height="40"></canvas></div>
-                            </div>
-                        </div>
-                        <div class="card mb-4">
-                            <div class="card-header">
-                                <i class="fas fa-table me-1"></i>
-                                Tabla de producto
-                            </div>
-                            <div class="card-body">
-                                <table id="datatablesSimple">
-                                </table>
+                                <div class="card-body">
+                                    <table id="datatablesSimple">
+                                    </table>
+                                </div>
                             </div>
                         </div>
 
 
 <hr>
 <h3 class="mt-2 mb-4">Minutos</h3>
-
-                        <div class="row">
-                            <div class="col-xl-6">
-                                <div class="card mb-4">
-                                    <div class="card-header">
-                                        <i class="fas fa-tools  me-1"></i>
-                                        Trabajados y Producidos
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xl-6">
+                                    <div class="card mb-4">
+                                        <div class="card-header">
+                                            <i class="fas fa-tools  me-1"></i>
+                                            Trabajados y Producidos
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="chart" id="Area-min-pt">
+    
+                                            </div>
+                                        </div>
                                     </div>
-
-                                    <div class="card-body"><canvas id="chartmes" width="100%" height="40"></canvas></div>
                                 </div>
                             </div>
                         </div>
+
                         
 <hr>
 <h3 class="mt-2 mb-4">Miscelaneos</h3>
-                        <div class="row">
-                            <div class="col-xl-6 col-md-3">
-                                <div class="card mb-4">
-                                    <div class="card-header">
-                                        <i class="fas fa-user  me-1"></i>
-                                        Promedio de operadores
-                                    </div>
 
-                                    <div class="card-body"><canvas id="chartmes" width="100%" height="40"></canvas></div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xl-6 col-md-3">
+                                    <div class="card mb-4">
+                                        <div class="card-header">
+                                            <i class="fas fa-user  me-1"></i>
+                                            Promedio de operadores
+                                        </div>
+    
+                                        <div class="card-body">
+                                            <div class="chart" id="Area-op-prom">
+    
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-xl-6 col-md-3">
-                                <div class="card mb-4">
-                                    <div class="card-header">
-                                        <i class="fas fa-clock  me-1"></i>
-                                        Minutos por piezado
+                                <div class="col-xl-6 col-md-3">
+                                    <div class="card mb-4">
+                                        <div class="card-header">
+                                            <i class="fas fa-clock  me-1"></i>
+                                            Minutos por piezado
+                                        </div>
+    
+                                        <div class="card-body">
+                                            <div class="chart" id="Area-min-pz">
+    
+                                            </div>
+                                        </div>
                                     </div>
-
-                                    <div class="card-body"><canvas id="chartmes" width="100%" height="40"></canvas></div>
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </main>
                 <footer class="py-4 bg-light mt-auto">
@@ -299,10 +361,11 @@
                 </footer>
             </div>
         </div>
-        <script src="main.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.0/echarts.min.js" integrity="sha512-k37wQcV4v2h6jgYf5IUz1MoSKPpDs630XGSmCaCCOXxy2awgAWKHGZWr9nMyGgk3IOxA1NxdkN8r1JHgkUtMoQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="infographic.js"></script>
+        <script src="graficas.js"></script>
         <script src="js/scripts.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.0/echarts.min.js" integrity="sha512-k37wQcV4v2h6jgYf5IUz1MoSKPpDs630XGSmCaCCOXxy2awgAWKHGZWr9nMyGgk3IOxA1NxdkN8r1JHgkUtMoQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
         <script src="js/datatables-simple-demo.js"></script>
     </body>

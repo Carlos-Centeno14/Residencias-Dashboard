@@ -1,10 +1,4 @@
 
-
-
-
-
-
-
 //Graficas de fases de produccion 1 y 2
 const getOptionChart1=() =>
     {
@@ -161,17 +155,15 @@ const getOptionChart3=() =>
   };
 //Graficas de fases de produccion 1 y 2 fin
 
-
 const initCharts =()=>
     {
-        //Graficas de fases de produccion 1 y 2
-        const chart1 = echarts.init(document.getElementById("Efi-fase"));
-        const chart2 = echarts.init(document.getElementById("Opm-fase"));
-        const chart3 = echarts.init(document.getElementById("Pep-fase"));
-        chart1.setOption(getOptionChart1());
-        chart2.setOption(getOptionChart2());
-        chart3.setOption(getOptionChart3());
-        //Graficas de fases de produccion 1 y 2
+      const chart1 = echarts.init(document.getElementById("Efi-fase"),'walden');
+      const chart2 = echarts.init(document.getElementById("Opm-fase"),'walden');
+      const chart3 = echarts.init(document.getElementById("Pep-fase"),'walden');
+
+      chart1.setOption(getOptionChart1());
+      chart2.setOption(getOptionChart2());
+      chart3.setOption(getOptionChart3());
     };
 
 window.addEventListener("load", ()  => 
