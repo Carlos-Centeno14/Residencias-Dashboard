@@ -157,9 +157,9 @@ const getOptionChart3=() =>
 
 const initCharts =()=>
     {
-      const chart1 = echarts.init(document.getElementById("Efi-fase"),'walden');
-      const chart2 = echarts.init(document.getElementById("Opm-fase"),'walden');
-      const chart3 = echarts.init(document.getElementById("Pep-fase"),'walden');
+      const chart1 = echarts.init(document.getElementById("Efi-fase"),'infographic');
+      const chart2 = echarts.init(document.getElementById("Opm-fase"),'infographic');
+      const chart3 = echarts.init(document.getElementById("Pep-fase"),'infographic');
 
       chart1.setOption(getOptionChart1());
       chart2.setOption(getOptionChart2());
