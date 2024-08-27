@@ -11239,3 +11239,16 @@ body {
   width: 100%;
   min-height: 400px;
 }
+@media print {
+  body, html {
+      width: 210mm; 
+      height: 297mm;
+      margin: 0;
+      padding: 0;
+  }
+
+  #prueba {
+      width: 100%; 
+      max-width: 210mm;
+  }
+}

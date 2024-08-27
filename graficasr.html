@@ -106,13 +106,15 @@
             <div id="layoutSidenav_content">
 
                 <main>
-                    <button class="btn btn-primary" id="generatereport">Guardar PDF</button>
+                    <button class="btn btn-primary" id="btncrearPdf">Convertir</button>
+
 
                     <div class="container-fluid px-4" id="prueba">
-                        <h1 class="mt-4">Generar Reporte PENDIENTE</h1>
+
+                        <h1 class="mt-4">REPORTE DATASYS</h1>
                         <ol class="breadcrumb mb-4">
                             <li class="breadcrumb-item active">
-                                EJECUTARLO PARA SACAR EL DIV DE 1 PAGINA.</li>
+                                A continuacion se mostraran los criterios a evaluar dentro de este reporte</li>
                         </ol>
                         
                         <div class="row">
@@ -289,7 +291,11 @@
                                 </div>
                             </div>
                         </div>
+                        <div id="elementH"></div>
 
+                    </div>
+                    <div>
+                        <button class="btn btn-dark" id="btncrearPdf">Generar Reporte</button>
                     </div>
                 </main>
                 <footer class="py-4 bg-light mt-auto">
@@ -302,10 +308,9 @@
             </div>
         </div>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.es.min.js" integrity="sha512-3chOMtjYaSa9m2bCC8qGxmEcX449u63D1fMXMQdueS3/XgE12iHQdmZVXVVbhBLc9i7h9WUuuM15B0CCE6Jtvg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
+        <script src="html2pdf.js-main/dist/html2pdf.bundle.min.js"></script>
         <script src="reporte.js"></script>
+
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
         <script src="js/scripts.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.0/echarts.min.js" integrity="sha512-k37wQcV4v2h6jgYf5IUz1MoSKPpDs630XGSmCaCCOXxy2awgAWKHGZWr9nMyGgk3IOxA1NxdkN8r1JHgkUtMoQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -314,32 +319,3 @@
     </body>
     
 </html>
-
-<script>
-
-    $('#generatereport').click(function()
-    {
-    var doc = new jsPDF();
-    var elementHTML = $('#prueba').html();
-    doc.fromHTML(elementHTML, 15, 15,
-    {'width': 170},
-    function()
-    {
-    var blob = doc.output('blob');
-    
-    var formData = new FormData();
-    formData.append('pdf', blob);
-    
-    $.ajax('upload.php',
-    {
-    method: 'POST',
-    data: formData,
-    processData: false,
-    contentType: false,
-    success: function(data){console.log(data)},
-    error: function(data){console.log(data)}
-    });
-    }
-    );
-    });
-    </script>

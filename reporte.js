@@ -1,16 +1,31 @@
-function convert_HTML_To_PDF() {
-    var doc = new jsPDF();
-    var elementHTML = $('#prueba').html();
-    var specialElementHandlers = {
-    '#elementH': function (element, renderer) {
-    return true;
-    }
-    };
-    doc.fromHTML(elementHTML, 15, 15, {
-    'width': 170,
-    'elementHandlers': specialElementHandlers
+document.addEventListener("DOMContentLoaded", () => {
+    const $boton = document.querySelector("#btncrearPdf");
+    $boton.addEventListener("click", () => {
+//        const $elementoParaConvertir = document.body; // <-- Aquí puedes elegir cualquier elemento del DOM
+    const $elementoParaConvertir = document.querySelector("#prueba");
+        html2pdf()
+            .set({
+                margin: 0,
+                filename: "documento.pdf",
+                image: {
+                    type: "jpeg",
+                    quality: 0.98
+                },
+                html2canvas: {
+                    scale: 2, // A mayor escala, mejores gráficos, pero más peso
+                    letterRendering: true,
+                    useCORS: true,
+                },
+                jsPDF: {
+                    unit: "mm",
+                    format: "a4",
+                    orientation: "portrait" // landscape o portrait
+                }
+            })
+            .from($elementoParaConvertir)
+            .save()
+            .catch(err => console.log(err));
     });
-    
-    // Save the PDF
-    doc.save('conversion-html-a-pdf.pdf');
-    }
+
+});
+

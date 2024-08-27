@@ -108,13 +108,14 @@
             </div>
             <div id="layoutSidenav_content">
                 <main>
-                    <div class="container-fluid px-4">
+                    <!-- CAPTURA DESDE AQUI -->
+                    <div id="prueba" class="container-fluid px-4" >
                         <h1 class="mt-4">Informe General de Fases de produccion</h1>
                         <ol class="breadcrumb mb-4">
                             <li class="breadcrumb-item active">
                                 En esta ventana se presentarán de manera detallada los resultados de las fases de producción en curso, proporcionando una visión integral y precisa del rendimiento de la planta.</li>
                         </ol>
-                        <div class="row">
+                        <div class="row" id="cards">
                             <!-- CARDS -->
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-primary text-white mb-4">
@@ -140,7 +141,8 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div>        
+
                         <!-- GRAFICAS -->
                         <div class="row">
                             <div class="input-group mb-3 mt-3">
@@ -218,6 +220,7 @@
                             </div>
                         </div>
                     </div>
+
                 </main>
                 <footer class="py-4 bg-light mt-auto">
                     <div class="container-fluid px-4">
@@ -228,6 +231,9 @@
                 </footer>
             </div>
         </div>
+        <script src="html2pdf.js-main/dist/html2pdf.bundle.min.js"></script>
+        <script src="reporte.js"></script>
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.0/echarts.min.js" integrity="sha512-k37wQcV4v2h6jgYf5IUz1MoSKPpDs630XGSmCaCCOXxy2awgAWKHGZWr9nMyGgk3IOxA1NxdkN8r1JHgkUtMoQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="infographic.js"></script>
         <script src="main.js"></script>
