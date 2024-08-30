@@ -11239,6 +11239,18 @@ body {
   width: 100%;
   min-height: 400px;
 }
+
+
+html2pdf__page-break {
+  display: block;
+  height: 0;
+  page-break-before: always;
+  margin: 0;
+  border: 0;
+}
+
+
+
 @media print {
   body, html {
       width: 210mm; 

@@ -531,7 +531,6 @@ const getOptionChart4=() => //Eficiencia Mensual
           }
         ]
       };
-  
     };
 
     const initCharts =()=>
@@ -557,10 +556,6 @@ const getOptionChart4=() => //Eficiencia Mensual
           chart10.setOption(getOptionChart10());
           chart11.setOption(getOptionChart11());
           chart12.setOption(getOptionChart12());
-    
-    
-    
-    
         };
     
     window.addEventListener("load", ()  => 

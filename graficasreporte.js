@@ -1,4 +1,4 @@
-const getOptionChart1=() =>
+const getOptionChart17=() =>
     {
       return{
         title: {
@@ -21,17 +21,16 @@ const getOptionChart1=() =>
                 color: 'rgba(180, 180, 180, 0.2)'
               },      
               label: {
-                textStyle:{ fontWeight : 'bolder',
-                fontSize: 25},
+                textStyle:{ fontWeight : 'bold',
+                fontSize: 18},
                 show: true,
-                position: 'top'
+                position: 'outside'
               }
-              
             }
           ]
       };
     };
-const getOptionChart2=() =>
+const getOptionChart18=() =>
     {
       return{
         title: {
@@ -55,16 +54,16 @@ const getOptionChart2=() =>
                 color: 'rgba(180, 180, 180, 0.2)'
               },      
               label: {
-                textStyle:{ fontWeight : 'bolder',
-                fontSize: 16},
-                show: true,
-                position: 'INSIDE'
+                textStyle:{ fontWeight : 'bold',
+                  fontSize: 18},
+                  show: true,
+                  position: 'outside'
               }
             }
           ]
       };
     };
-const getOptionChart3=() =>//Min trabajados
+const getOptionChart19=() =>//Min trabajados
     {
       return{
         title: {
@@ -87,17 +86,17 @@ const getOptionChart3=() =>//Min trabajados
                 color: 'rgba(180, 180, 180, 0.2)'
               },      
               label: {
-                textStyle:{ fontWeight : 'bolder',
-                fontSize: 25},
-                show: true,
-                position: 'top'
+                textStyle:{ fontWeight : 'bold',
+                  fontSize: 18},
+                  show: true,
+                  position: 'outside'
               }
               
             }
           ]
       };
     };
-const getOptionChart4=() =>//Min Producidos
+const getOptionChart20=() =>//Min Producidos
     {
       return{
         title: {
@@ -120,17 +119,17 @@ const getOptionChart4=() =>//Min Producidos
                 color: 'rgba(180, 180, 180, 0.2)'
               },      
               label: {
-                textStyle:{ fontWeight : 'bolder',
-                fontSize: 25},
-                show: true,
-                position: 'top'
+                textStyle:{ fontWeight : 'bold',
+                  fontSize: 18},
+                  show: true,
+                  position: 'outside'
               }
               
             }
           ]
       };
     };
-const getOptionChart5=() =>//Prom operadores
+const getOptionChart21=() =>//Prom operadores
     {
       return{
         title: {
@@ -154,16 +153,16 @@ const getOptionChart5=() =>//Prom operadores
                 color: 'rgba(180, 180, 180, 0.2)'
               },      
               label: {
-                textStyle:{ fontWeight : 'bolder',
-                fontSize: 16},
-                show: true,
-                position: 'top'
+                textStyle:{ fontWeight : 'bold',
+                  fontSize: 18},
+                  show: true,
+                  position: 'outside'
               }
             }
           ]
       };
     };
-const getOptionChart6=() =>//Min x pza
+const getOptionChart22=() =>//Min x pza
     {
       return{
         title: {
@@ -186,10 +185,10 @@ const getOptionChart6=() =>//Min x pza
                 color: 'rgba(180, 180, 180, 0.2)'
               },      
               label: {
-                textStyle:{ fontWeight : 'bolder',
-                fontSize: 25},
-                show: true,
-                position: 'top'
+                textStyle:{ fontWeight : 'bold',
+                  fontSize: 18},
+                  show: true,
+                  position: 'outside'
               }
               
             }
@@ -199,24 +198,23 @@ const getOptionChart6=() =>//Min x pza
 
 const initCharts =()=>
     {
-      const chart1 = echarts.init(document.getElementById("Eficiencia"),'walden');
-      const chart2 = echarts.init(document.getElementById("Producto"),'walden');
-      const chart3 = echarts.init(document.getElementById("MTrabajados"),'walden');
-      const chart4 = echarts.init(document.getElementById("MProducidos"),'walden');
-      const chart5 = echarts.init(document.getElementById("Operadores"),'walden');
-      const chart6 = echarts.init(document.getElementById("Minpza"),'walden');
+      const chart17 = echarts.init(document.getElementById("EficienciaR"),'infographic');
+      const chart18 = echarts.init(document.getElementById("ProductoR"),'infographic');
+      const chart19 = echarts.init(document.getElementById("MTrabajadosR"),'infographic');
+      const chart20 = echarts.init(document.getElementById("MProducidosR"),'infographic');
+      const chart21 = echarts.init(document.getElementById("OperadoresR"),'infographic');
+      const chart22 = echarts.init(document.getElementById("MinpzaR"),'infographic');
 
-
-      chart1.setOption(getOptionChart1());
-      chart2.setOption(getOptionChart2());
-      chart3.setOption(getOptionChart3());
-      chart4.setOption(getOptionChart4());
-      chart5.setOption(getOptionChart5());
-      chart6.setOption(getOptionChart6());
+      chart17.setOption(getOptionChart17());
+      chart18.setOption(getOptionChart18());
+      chart19.setOption(getOptionChart19());
+      chart20.setOption(getOptionChart20());
+      chart21.setOption(getOptionChart21());
+      chart22.setOption(getOptionChart22());
     };
 
-window.addEventListener("load", ()  => 
-    {
-        initCharts();
-    }
-)
+    window.addEventListener("load", ()  => 
+        {
+            initCharts();
+        }
+    )

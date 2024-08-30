@@ -1,31 +1,27 @@
 document.addEventListener("DOMContentLoaded", () => {
     const $boton = document.querySelector("#btncrearPdf");
     $boton.addEventListener("click", () => {
-//        const $elementoParaConvertir = document.body; // <-- Aquí puedes elegir cualquier elemento del DOM
-    const $elementoParaConvertir = document.querySelector("#prueba");
+        const $elementoParaConvertir = document.querySelector("#prueba");
+
         html2pdf()
             .set({
-                margin: 0,
-                filename: "documento.pdf",
+                filename: "ReporteArea.pdf",
                 image: {
-                    type: "jpeg",
+                    type: "pdf",
                     quality: 0.98
                 },
                 html2canvas: {
-                    scale: 2, // A mayor escala, mejores gráficos, pero más peso
+                    scale: 2, 
                     letterRendering: true,
-                    useCORS: true,
                 },
                 jsPDF: {
-                    unit: "mm",
+                    unit: "in",
                     format: "a4",
-                    orientation: "portrait" // landscape o portrait
+                    orientation: "portrait"
                 }
             })
             .from($elementoParaConvertir)
             .save()
             .catch(err => console.log(err));
     });
-
 });
-
