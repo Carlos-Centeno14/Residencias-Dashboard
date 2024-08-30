@@ -11264,3 +11264,31 @@ html2pdf__page-break {
       max-width: 210mm;
   }
 }
+
+@media print {
+  /* Encabezado y pie de página personalizados */
+  @page {
+      margin: 10mm;
+  }
+  header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      text-align: center;
+      font-weight: bold;
+  }
+  footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+      font-size: 10pt;
+  }
+}
+.page-break-before {
+  page-break-before: always;
+}
+
+.page-break-after {
+  page-break-after: always;
+}

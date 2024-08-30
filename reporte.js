@@ -1,11 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
     const $boton = document.querySelector("#btncrearPdf");
     $boton.addEventListener("click", () => {
-        const $elementoParaConvertir = document.querySelector("#prueba");
+        // const $elementoParaConvertir = document.querySelector("#prueba");
+        const $elementoParaConvertir = document.body;
 
         html2pdf()
             .set({
-                filename: "ReporteArea.pdf",
+                filename: 'Reporte_' + new Date().toLocaleDateString().replace(/\//g, '-') + '.pdf',
                 image: {
                     type: "pdf",
                     quality: 0.98

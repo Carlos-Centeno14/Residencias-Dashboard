@@ -13,12 +13,12 @@
     </head>
     <style>
         .chart {
-            width: 400px;
+            width: 500px;
             height: 400px;
         }
         .pdfpage
         {
-            border: 1px slategrey solid;
+            /* border: 1px slategrey solid; */
             width: 700px;
             padding: 10px;
             /* margin: 5px 5px 5px 5px; */
@@ -130,46 +130,42 @@
                         <!-- prueba para impresion -->
                         <page>
                             <div id="prueba" class="pdfpage">
-                                <h1 class="mt-2">Reporte Datasys</h1>
-                                <ol class=" mb-2">
-                                    <p>A continuacion se mostraran los criterios a evaluar dentro de este reporte</p>
-                                </ol>
+                                <h1 class="mt-2">Reporte de evaluacion</h1>
                                 
                                 <div class="row">
                                     <div class="input-group mb-3 mt-3">
                                         <label class="input-group-text" for="areas">Area</label>
                                         <select class="form-select" id="areas">
-                                          <option selected>Seleccione el area a revisar...</option>
-                                          <option value="1">Corte</option>
-                                          <option value="2">Habilitado</option>
-                                          <option value="3">Armado</option>
-                                          <option value="4">etc.</option>
+                                            <option selected>Seleccione el area a revisar...</option>
+                                            <option value="1">Corte</option>
+                                            <option value="2">Habilitado</option>
+                                            <option value="3">Armado</option>
+                                            <option value="4">etc.</option>
                                         </select>
-        
+                    
                                         <label class="input-group-text" for="areas">Año</label>
                                         <select class="form-select" id="areas">
-                                          <option selected>Seleccione el año a revisar...</option>
-                                          <option value="1">2021</option>
-                                          <option value="2">2022</option>
-                                          <option value="3">2023</option>
-                                          <option value="4">2024</option>
+                                            <option selected>Seleccione el año a revisar...</option>
+                                            <option value="1">2021</option>
+                                            <option value="2">2022</option>
+                                            <option value="3">2023</option>
+                                            <option value="4">2024</option>
                                         </select>
                                     </div>
                                 </div>
-        
-                                
+                    
                                 <div class="row mt-3">
                                     <div class="col-3">
-                                        <div class="card text-bg-light mb-2">
+                                        <div class="card text-bg-secondary mb-4">
                                             <div class="card-body">9,998</div>
                                             <div class="card-footer d-flex align-items-center justify-content-between">
                                                 Producto Total
                                             </div>
                                         </div>
                                     </div>
-        
+                    
                                     <div class="col-3">
-                                        <div class="card text-bg-light mb-2">
+                                        <div class="card text-bg-secondary mb-4">
                                             <div class="card-body">255,540</div>
                                             <div class="card-footer d-flex align-items-center justify-content-between">
                                                 Minutos Trabajados
@@ -177,16 +173,16 @@
                                         </div>
                                     </div>
                                     <div class="col-3">
-                                        <div class="card text-bg-light mb-2">
+                                        <div class="card text-bg-secondary mb-4">
                                             <div class="card-body">155,540</div>
                                             <div class="card-footer d-flex align-items-center justify-content-between">
                                                 Minutos Producidos
                                             </div>
                                         </div>
                                     </div>
-        
+                    
                                     <div class="col-3">
-                                        <div class="card text-bg-light mb-2">
+                                        <div class="card text-bg-secondary mb-4">
                                             <div class="card-body">100.00%</div>
                                             <div class="card-footer d-flex align-items-center justify-content-between">
                                                 Eficiencia Promedio
@@ -194,58 +190,56 @@
                                         </div>
                                     </div>
                                 </div>
-                <div id="">
-        
-                                <div class="row">
-                                    <div class="col-6">
+                                <hr>
+                    
+                                <div id="">
+                                    <div class="row">
+                                        <div class="col-6">
                                             <div class="d-flex justify-content-center">
                                                 <div class="chart" id="EficienciaR"></div>
                                             </div>
-                                    </div>
-                                    <div class="col-6">
+                                        </div>
+                                        <div class="col-6">
                                             <div class="d-flex justify-content-center">
                                                 <div class="chart" id="ProductoR"></div>
                                             </div>
+                                        </div>
                                     </div>
-                                </div>
-        
-                                <div class="row">
-                                    <div class="col-6">
+                                <!-- Salto de página aquí -->
+                                <div class="page-break-before"></div>                                    
+                    
+                                    <div class="row">
+                                        <div class="col-6">
                                             <div class="d-flex justify-content-center">
-                                                <div id="MTrabajadosR" class="chart" ></div>
+                                                <div id="MTrabajadosR" class="chart"></div>
                                             </div>
-                                    </div>
-                                    <div class="col-6">
+                                        </div>
+                                        <div class="col-6">
                                             <div class="d-flex justify-content-center">
                                                 <div class="chart" id="OperadoresR"></div>
                                             </div>
+                                        </div>
+                                    </div>
+                    
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="d-flex justify-content-center">
+                                                <div id="MProducidosR" class="chart"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="d-flex justify-content-center">
+                                                <div class="chart" id="MinpzaR"></div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-        <hr class="">
-        
-        <div class="row">
-            <div class="col-6">
-                    <div class="d-flex justify-content-center">
-                        <div id="MProducidosR" class="chart" ></div>
-                    </div>
-            </div>
-            <div class="col-6">
-                    <div class="d-flex justify-content-center">
-                        <div class="chart" id="MinpzaR"></div>
-                    </div>
-            </div>
-        </div>
-        
-        </div>
-        
-        
-                                </div>
+                            </div>
                         </page>
-
-
                     </div>
+                    
                     <div class="d-grid gap-2 col-6 mx-auto mt-4">
-                        <!-- <button class="btn btn-dark" id="btncrearPdf" type="button">Generar Reporte</button>
+                        <!--<button class="btn btn-dark" id="btncrearPdf" type="button">Generar Reporte</button>
                         <button type="button" class="btn btn-outline-secondary">Secondary</button>
                         
                         <button type="button" class="btn btn-outline-info">Info</button>
@@ -263,11 +257,12 @@
                 </footer>
             </div>
         </div>
-
+        <!-- <script>
+            document.title = "Reporte_" + new Date().toLocaleDateString().replace(/\//g, '-');
+        </script> -->
 
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.0/echarts.min.js" integrity="sha512-k37wQcV4v2h6jgYf5IUz1MoSKPpDs630XGSmCaCCOXxy2awgAWKHGZWr9nMyGgk3IOxA1NxdkN8r1JHgkUtMoQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <script src="infographic.js"></script>
         <script src="graficasreporte.js"></script>
 
         <script src="html2pdf.js-main/dist/html2pdf.bundle.min.js"></script>
