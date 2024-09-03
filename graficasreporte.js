@@ -36,33 +36,40 @@ const getOptionChart18=() =>
         title: {
           text: 'Producto Entregado',
           subtext: 'Grafica del producto anual del area'
+          },
+    xAxis: {
+            type: 'category',
+            data: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic']
+    },
+    yAxis: {
+      type: 'value'
+    },
+    series: [
+      {
+        data: [150, 230, 224, 218, 135, 147, 260,80, 72, 101, 64,110],
+        type: 'line',
+        symbol: 'square',
+        symbolSize: 14,
+        lineStyle: {
+          color: '#0098d9',
+          width: 3,
+          type: 'dashed'
         },
-        xAxis: {
-          type: 'category',
-          boundaryGap: false,
-                    data: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic']
+  
+        showBackground: true,
+        backgroundStyle: {
+        color: 'rgba(180, 180, 180, 0.2)'
         },
-        yAxis: {
-          type: 'value'
-        },
-        series: [
-          {
-            data: [800, 720, 1011, 640, 900, 650, 1000,700,850,905,924,955],
-            type: 'line',
-            areaStyle: {},
-                  backgroundStyle: {
-              color: 'rgba(180, 180, 180, 0.2)'
-            },      
-            label: {
-              textStyle:{ fontWeight : 'bolder',
-                fontSize: 14},
-                show: true,
-                position: 'outside'
-            }
-          }
-        ]
-      };
-    };
+        label: {
+        textStyle:{ fontWeight : 'bold',
+        fontSize: 14},
+        show: true,
+        position: 'outside'
+        }
+      }
+    ]
+  };
+};
 const getOptionChart19=() =>//Min trabajados
     {
       return{
@@ -87,7 +94,7 @@ const getOptionChart19=() =>//Min trabajados
             },      
             label: {
               textStyle:{ fontWeight : 'bold',
-                fontSize: 16},
+                fontSize: 14},
                 show: true,
                 position: 'outside'
             }
@@ -103,11 +110,11 @@ const getOptionChart20=() =>//Min Producidos
             text: 'Minutos Producidos',
             subtext: 'Grafica de los minutos producidos por mes del area'
           },
-          xAxis: {
+          yAxis: {
             type: 'category',
                   data: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic']
           },
-          yAxis: {
+          xAxis: {
             type: 'value'
           },
           series: [
@@ -120,79 +127,55 @@ const getOptionChart20=() =>//Min Producidos
               },      
               label: {
                 textStyle:{ fontWeight : 'bold',
-                  fontSize: 18},
+                  fontSize: 16},
                   show: true,
                   position: 'outside'
               }
               
             }
           ]
+  
       };
     };
 const getOptionChart21=() =>//Prom operadores
     {
       return{
         title: {
-            text: 'Operadores Promedio',
-            subtext: 'Operadores promedio anual del area'
-          },
-          xAxis: {
-            type: 'category',
-            boundaryGap: false,
-                      data: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic']
-          },
-          yAxis: {
-            type: 'value'
-          },
-          series: [
-            {
-              data: [800, 720, 1011, 640, 900, 650, 1000,700,850,905,924,955],
-              type: 'line',
-              areaStyle: {},
-                    backgroundStyle: {
-                color: 'rgba(180, 180, 180, 0.2)'
-              },      
+          text: 'Operadores Promedio',
+          subtext: 'Operadores promedio anual del area'
+        },
+xAxis: {
+  type: 'category',
+                data: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic']
+},
+yAxis: {
+  type: 'value'
+},
+series: [
+  {
+    data: [80, 72, 101, 64, 90, 65, 100,70,85,90,92,95],
+    type: 'line',
+    symbol: 'circle',
+    symbolSize: 12,
+    lineStyle: {
+      color: '#0098d9',
+      width: 2,
+      type: 'dashed'
+    },
               label: {
-                textStyle:{ fontWeight : 'bold',
-                  fontSize: 18},
-                  show: true,
-                  position: 'outside'
-              }
+              textStyle:{ fontWeight : 'bolder',
+              fontSize: 14},
+              show: true,
+              position: 'outside'
             }
-          ]
+  }
+]
       };
     };
 const getOptionChart22=() =>//Min x pza
     {
       return{
-        title: {
-            text: 'Minutos por pieza promedio',
-            subtext: 'Grafica de los minutos por pieza producida por mes del area'
-          },
-          xAxis: {
-            type: 'category',
-                  data: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic']
-          },
-          yAxis: {
-            type: 'value'
-          },
-          series: [
-            {
-              data: [80, 72, 101, 64, 90, 65, 100,70,85,90,92,95],
-              type: 'bar',
-              showBackground: true,
-              backgroundStyle: {
-                color: 'rgba(180, 180, 180, 0.2)'
-              },      
-              label: {
-                textStyle:{ fontWeight : 'bold',
-                  fontSize: 18},
-                  show: true,
-                  position: 'outside'
-              }
-              
-            }
-          ]
+
       };
     };        
 
@@ -218,3 +201,5 @@ const initCharts =()=>
             initCharts();
         }
     )
+
+    //ACOMODAR EL TAMANO DE LAS GRAFICAS PARA TENER LOS 12 MESES DISPONIBLES
